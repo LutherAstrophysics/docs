@@ -35,3 +35,30 @@ TODO
 
 ### How do I share my Jupyter notebook with another user/researcher easily?
 TODO
+
+### How to use m23 package modules?
+Anything that's defined in m23 should be acessible through the jupyter
+notebook. For example you could just go and do 
+
+```
+from m23.utils import rename
+
+# now you could use the rename function as you wish
+```
+
+To make this possible, we have made the folder
+`/home/m23/Desktop/python-helpers` readable by any user in the system.
+This had to be done even though it might look like we're only using
+one user in the system (which isn't technically true because at the
+very least we are using `m23` as the root user and `jupyter-m23` user
+for the jupyter notebook). And in the future, we might as well choose
+to use the system using multiple user accounts to keep data of each
+user separate.
+
+The folder aforementioned has been inserted to the system path that
+ipython in the jupyter looks for when starting the notebook. This has
+been done through the code at `/home/jupyter-m23/.ipython/profile_default/00-first.py`.
+Apparently, when upon starting a jupyter notebook, all the python code
+in the folder `/home/jupyter-m23/.ipython/profile_default/` are
+executed in lexographic order meaning `001.py` first, `002.py`
+`003.py`. 
