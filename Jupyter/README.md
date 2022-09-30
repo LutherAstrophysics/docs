@@ -30,6 +30,38 @@ m23. If you're an adminstrator trying to manage python packages and
 versions for your users and yourself, this article might be helpful
 https://tljh.jupyter.org/en/latest/howto/env/user-environment.html.   
 
+We can use the following command to install a pacakge say `gdal` from
+coda-forge.
+```
+sudo -E conda install -c conda-forge gdal
+``` 
+
+To install packages from a file, the equivalent of doing 
+
+```
+pip install -r requirements.txt
+```
+
+would be 
+
+```
+sudo -E conda install -c conda-forge --file requirements.txt
+```
+
+Note that as mentiond in
+https://tljh.jupyter.org/en/latest/howto/env/user-environment.html, 
+the option `sudo -E` is important as this install packages for all
+users. In our case, we want to install pacakges required in the
+`analysis` repo, so we would probably do something like
+
+```
+sudo -E conda install -c conda-forge --file
+/home/m23/Desktop/analysis/requirements.txt
+```
+
+
+
+
 ### How to get the data?
 TODO
 
@@ -47,7 +79,7 @@ from m23.utils import rename
 ```
 
 To make this possible, we have made the folder
-`/home/m23/Desktop/python-helpers` readable by any user in the system.
+`/home/m23/Desktop/analysis` readable by any user in the system.
 This had to be done even though it might look like we're only using
 one user in the system (which isn't technically true because at the
 very least we are using `m23` as the root user and `jupyter-m23` user
@@ -57,8 +89,8 @@ user separate.
 
 The folder aforementioned has been inserted to the system path that
 ipython in the jupyter looks for when starting the notebook. This has
-been done through the code at `/home/jupyter-m23/.ipython/profile_default/00-first.py`.
+been done through the code at `/home/jupyter-m23/.ipython/profile_default/startup/00-first.py`.
 Apparently, when upon starting a jupyter notebook, all the python code
-in the folder `/home/jupyter-m23/.ipython/profile_default/` are
+in the folder `/home/jupyter-m23/.ipython/profile_default/startup` are
 executed in lexographic order meaning `001.py` first, `002.py`
 `003.py`. 
