@@ -48,6 +48,11 @@ would be
 sudo -E conda install -c conda-forge --file requirements.txt
 ```
 
+More specifically,
+```
+sudo -E conda install -c conda-forge --file /home/m23/Desktop/analysis/requirements.txt
+```
+
 Note that as mentiond in
 https://tljh.jupyter.org/en/latest/howto/env/user-environment.html, 
 the option `sudo -E` is important as this install packages for all
