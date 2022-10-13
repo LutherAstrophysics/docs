@@ -111,13 +111,6 @@ executed in lexographic order meaning `001.py` first, `002.py`
 `003.py`. 
 
 After updating the `analysis` folder with new code, to make sure that
-they are availble in the Jupyter environment, you might have to reload
-the modules as follows:
-```
-from trout import stars
-import imporlib
-# To import stars module
-importlib.reload(stars)
-```
-Or restarting the specific jupyter notebook might help:
+they are availble in the Jupyter environment, you might have to kill
+and restart the notebook. The killing may be done from here:
 <http://10.30.5.4/user/m23/tree#running>
