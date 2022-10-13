@@ -49,8 +49,16 @@ sudo -E conda install -c conda-forge --file requirements.txt
 ```
 
 More specifically,
+
 ```
 sudo -E conda install -c conda-forge --file /home/m23/Desktop/analysis/requirements.txt
+```
+
+But for some reasons this kept throwing errors and I had to use pipi
+as follows:
+
+```
+sudo -E pip install -r /home/m23/Desktop/analysis/requirements.txt
 ```
 
 Note that as mentiond in
