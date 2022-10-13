@@ -111,3 +111,5 @@ import imporlib
 # To import stars module
 importlib.reload(stars)
 ```
+Or restarting the specific jupyter notebook might help:
+<http://10.30.5.4/user/m23/tree#running>
