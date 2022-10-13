@@ -78,9 +78,11 @@ Anything that's defined in m23 should be acessible through the jupyter
 notebook. For example you could just go and do 
 
 ```
-from m23.utils import rename
+from trout.stars import get_star_data
 
-# now you could use the rename function as you wish
+# For usage of get_star_data
+# Try help(get_star_data) or look into the analysis repo in our github
+# for the srouce
 ```
 
 To make this possible, we have made the folder
