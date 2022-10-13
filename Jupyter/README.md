@@ -101,3 +101,13 @@ Apparently, when upon starting a jupyter notebook, all the python code
 in the folder `/home/jupyter-m23/.ipython/profile_default/startup` are
 executed in lexographic order meaning `001.py` first, `002.py`
 `003.py`. 
+
+After updating the `analysis` folder with new code, to make sure that
+they are availble in the Jupyter environment, you might have to reload
+the modules as follows:
+```
+from trout import stars
+import imporlib
+# To import stars module
+importlib.reload(stars)
+```
