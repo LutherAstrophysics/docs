@@ -114,3 +114,6 @@ After updating the `analysis` folder with new code, to make sure that
 they are availble in the Jupyter environment, you might have to kill
 and restart the notebook. The killing may be done from here:
 <http://10.30.5.4/user/m23/tree#running>
+
+Like to a small sample video on getting started to using our module is
+at <https://drive.google.com/file/d/1aj9zuUWRLkwh-Ngj9vIDoI_AjXxL68wq/view?usp=sharing>
