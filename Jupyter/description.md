@@ -14,7 +14,7 @@ code so that you can start using `trout` package for data analysis.
 ```shell
 cd "/home/`whoami`/.ipython/profile_default/startup/"
 echo 'import sys' > 00-first.py
-echo sys.path.insert(0, "/home/m23/Desktop/analysis") >> 00-first.py
+echo 'sys.path.insert(0, "/home/m23/Desktop/analysis")' >> 00-first.py
 ```
 
 Then you should be able to import and use the trout package for data analysis. 
