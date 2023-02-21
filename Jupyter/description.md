@@ -11,7 +11,7 @@ from their newly created account (in the password field, you just type in a
 new password) and open up a new terminal. In the terminal paste the following
 code so that you can start using `trout` package for data analysis.
 
-```
+```shell
 cd "/home/`whoami`/.ipython/profile_default/startup/"
 echo 'import sys' > 00-first.py
 echo sys.path.insert(0, "/home/m23/Desktop/analysis") >> 00-first.py
@@ -46,32 +46,32 @@ https://tljh.jupyter.org/en/latest/howto/env/user-environment.html.
 
 We can use the following command to install a pacakge say `gdal` from
 coda-forge.
-```
+```shell
 sudo -E conda install -c conda-forge gdal
 ``` 
 
 To install packages from a file, the equivalent of doing 
 
-```
+```shell
 pip install -r requirements.txt
 ```
 
 would be 
 
-```
+```shell
 sudo -E conda install -c conda-forge --file requirements.txt
 ```
 
 More specifically,
 
-```
+```shell
 sudo -E conda install -c conda-forge --file /home/m23/Desktop/analysis/requirements.txt
 ```
 
 But for some reasons this kept throwing errors and I had to use pipi
 as follows:
 
-```
+```shell
 sudo -E pip install -r /home/m23/Desktop/analysis/requirements.txt
 ```
 
@@ -81,7 +81,7 @@ the option `sudo -E` is important as this install packages for all
 users. In our case, we want to install pacakges required in the
 `analysis` repo, so we would probably do something like
 
-```
+```shell
 sudo -E conda install -c conda-forge --file
 /home/m23/Desktop/analysis/requirements.txt
 ```
@@ -99,7 +99,7 @@ TODO
 Anything that's defined in m23 should be acessible through the jupyter
 notebook. For example you could just go and do 
 
-```
+```python
 from trout.stars import get_star_data
 
 # For usage of get_star_data
