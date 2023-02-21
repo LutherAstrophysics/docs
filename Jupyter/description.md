@@ -6,6 +6,20 @@ goes well, you shall be prompted for login upon visiting the link. If
 your user account hasn't yet been created, you may request for account
 creation with @wilkerje or someone else at the lab.
 
+Once a new account is created, the user has to login to the jupyter notebook 
+from their newly created account (in the password field, you just type in a 
+new password) and open up a new terminal. In the terminal paste the following
+code so that you can start using `trout` package for data analysis.
+
+```
+cd "/home/`whoami`/.ipython/profile_default/startup/"
+echo 'import sys' > 00-first.py
+echo sys.path.insert(0, "/home/m23/Desktop/analysis") >> 00-first.py
+```
+
+Then you should be able to import and use the trout package for data analysis. 
+
+
 Few things to know about the Jypter notebook running in our system:
 1. The instance running in our server is callled [the littlest jupyter
    hub](https://tljh.jupyter.org/en/latest/install/custom-server.html).
