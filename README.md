@@ -13,8 +13,8 @@ library imports to work.
 
 ```
 cd 
-mkdir -p profile_default/startup/
-cd mkdir -p profile_default/startup/
+mkdir -p .ipython/profile_default/startup/
+cd mkdir -p .ipython/profile_default/startup/
 echo 'import sys' > 00-first.py
 echo 'sys.path.insert(0, "/home/m23/Desktop/analysis")' >> 00-first.py
 ```
