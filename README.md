@@ -14,7 +14,7 @@ library imports to work.
 ```
 cd 
 mkdir -p .ipython/profile_default/startup/
-cd mkdir -p .ipython/profile_default/startup/
+cd .ipython/profile_default/startup/
 echo 'import sys' > 00-first.py
 echo 'sys.path.insert(0, "/home/m23/Desktop/analysis")' >> 00-first.py
 ```
